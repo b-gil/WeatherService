@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 import org.joda.time.DateTime;
-import org.springframework.data.convert.Jsr310Converters;
 
-import java.util.Date;
 
 @Accessors(chain = true)
 @Getter

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.datatype.joda.JodaModule;
 import lombok.val;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import java.text.SimpleDateFormat;
 
 @Configuration
@@ -18,5 +17,4 @@ public class JacksonConfig {
         mapper.setDateFormat(SimpleDateFormat.getDateTimeInstance());
         return mapper;
     }
-
 }

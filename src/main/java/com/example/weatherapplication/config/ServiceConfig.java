@@ -1,5 +1,7 @@
 package com.example.weatherapplication.config;
 
+import com.example.weatherapplication.service.SubscribeService;
+import com.example.weatherapplication.service.SubscribeServiceImpl;
 import com.example.weatherapplication.service.WeatherService;
 import com.example.weatherapplication.service.WeatherServiceImpl;
 import org.springframework.context.annotation.Bean;
@@ -13,5 +15,11 @@ public class ServiceConfig {
     @Lazy
     public WeatherService weatherService(){
         return new WeatherServiceImpl();
+    }
+
+    @Bean
+    @Lazy
+    public SubscribeService subscribeService(){
+        return new SubscribeServiceImpl();
     }
 }
