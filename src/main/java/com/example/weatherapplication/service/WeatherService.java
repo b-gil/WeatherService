@@ -4,5 +4,8 @@ import com.example.weatherapplication.model.WeatherServiceModel;
 import java.util.List;
 
 public interface WeatherService {
-    List<WeatherServiceModel> metnisZaPogodoi(String subscribeId);
+    List<WeatherServiceModel> findWeatherFromDB(String subscribeId);
+
+    WeatherServiceModel retrieveWeatherFromSubscribe(String subscribeId);
+
 }

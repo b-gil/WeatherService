@@ -2,7 +2,14 @@ package com.example.weatherapplication.dao;
 
 import com.example.weatherapplication.model.SubscribeDto;
 import java.util.List;
+import java.util.Optional;
 
 public interface SubscribeDao {
-    List<SubscribeDto> findSubscribe(String subscribeId);
+    Optional<SubscribeDto> findSubscribe(String subscribeId);
+
+    List<SubscribeDto> showAllSubscribe();
+
+    void createSubscribe(SubscribeDto subscribeDto);
+
+    void deleteSubscribe(String subscribeId);
 }

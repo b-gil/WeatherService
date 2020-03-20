@@ -5,7 +5,6 @@ import lombok.Setter;
 import lombok.experimental.Accessors;
 import org.joda.time.DateTime;
 
-
 @Accessors(chain = true)
 @Getter
 @Setter
