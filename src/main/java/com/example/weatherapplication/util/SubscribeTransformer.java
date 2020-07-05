@@ -1,8 +1,8 @@
 package com.example.weatherapplication.util;
 
-import com.example.weatherapplication.model.SubscribeDto;
-import com.example.weatherapplication.model.SubscribeResponseJson;
-import com.example.weatherapplication.model.SubscribeServiceModel;
+import com.example.weatherapplication.dao.model.SubscribeDto;
+import com.example.weatherapplication.rest.controller.model.SubscribeResponseJson;
+import com.example.weatherapplication.service.model.SubscribeServiceModel;
 
 public class SubscribeTransformer {
 

@@ -8,7 +8,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class RestClientWeatherConfig {
 
-
     @Bean
     public HttpClient httpClient() {
         return HttpClientBuilder.create().build();

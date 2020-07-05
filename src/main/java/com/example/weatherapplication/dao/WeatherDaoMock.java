@@ -1,6 +1,6 @@
 package com.example.weatherapplication.dao;
 
-import com.example.weatherapplication.model.WeatherDto;
+import com.example.weatherapplication.dao.model.WeatherDto;
 import org.joda.time.DateTime;
 import java.util.ArrayList;
 import java.util.List;

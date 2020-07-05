@@ -1,4 +1,4 @@
-package com.example.weatherapplication.model;
+package com.example.weatherapplication.rest.controller.model;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;

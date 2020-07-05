@@ -1,4 +1,4 @@
-package com.example.weatherapplication.model;
+package com.example.weatherapplication.dao.model;
 
 import lombok.Getter;
 import lombok.Setter;

@@ -1,8 +1,8 @@
 package com.example.weatherapplication.rest.controller;
 
-import com.example.weatherapplication.model.SubscribeDeleteResponseJson;
-import com.example.weatherapplication.model.SubscribeRequestJson;
-import com.example.weatherapplication.model.SubscribeResponseJson;
+import com.example.weatherapplication.rest.controller.model.SubscribeDeleteResponseJson;
+import com.example.weatherapplication.rest.controller.model.SubscribeRequestJson;
+import com.example.weatherapplication.rest.controller.model.SubscribeResponseJson;
 import com.example.weatherapplication.service.SubscribeService;
 import com.example.weatherapplication.util.SubscribeTransformer;
 import org.springframework.beans.factory.annotation.Value;

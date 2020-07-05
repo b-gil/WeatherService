@@ -1,8 +1,8 @@
 package com.example.weatherapplication.service;
 
-import com.example.weatherapplication.model.SubscribeDeleteResponseJson;
-import com.example.weatherapplication.model.SubscribeRequestJson;
-import com.example.weatherapplication.model.SubscribeServiceModel;
+import com.example.weatherapplication.rest.controller.model.SubscribeDeleteResponseJson;
+import com.example.weatherapplication.rest.controller.model.SubscribeRequestJson;
+import com.example.weatherapplication.service.model.SubscribeServiceModel;
 import java.util.List;
 
 public interface SubscribeService {

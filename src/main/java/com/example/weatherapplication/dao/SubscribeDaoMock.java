@@ -1,22 +1,45 @@
 package com.example.weatherapplication.dao;
 
-import com.example.weatherapplication.model.SubscribeDto;
+import com.example.weatherapplication.dao.model.SubscribeDto;
 import org.joda.time.DateTime;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 public class SubscribeDaoMock implements SubscribeDao {
     private final List<SubscribeDto> subscribeDtoList = new ArrayList<>();
 
     {
-        subscribeDtoList.add(new SubscribeDto().setSubscribeActive(true).setSubscribeId("1"));
-        subscribeDtoList.add(new SubscribeDto().setSubscribeActive(true).setSubscribeId("2"));
-        subscribeDtoList.add(new SubscribeDto().setSubscribeActive(true).setSubscribeId("3"));
-        subscribeDtoList.add(new SubscribeDto().setSubscribeActive(true).setSubscribeId("4"));
+        subscribeDtoList.add(new SubscribeDto()
+                .setSubscribeActive(true)
+                .setLatitude(new BigDecimal(55.985736))
+                .setLongitude(new BigDecimal(73.31302))
+                .setStartTime(DateTime.now())
+                .setSubscribeId("1"));
+
+        subscribeDtoList.add(new SubscribeDto()
+                .setSubscribeActive(true)
+                .setLatitude(new BigDecimal(55.985736))
+                .setLongitude(new BigDecimal(74.31302))
+                .setStartTime(DateTime.now())
+                .setSubscribeId("2"));
+
+        subscribeDtoList.add(new SubscribeDto()
+                .setSubscribeActive(true)
+                .setLatitude(new BigDecimal(66.985736))
+                .setLongitude(new BigDecimal(74.31302))
+                .setStartTime(DateTime.now())
+                .setSubscribeId("3"));
+
+        subscribeDtoList.add(new SubscribeDto()
+                .setSubscribeActive(true)
+                .setLatitude(new BigDecimal(99.985736))
+                .setLongitude(new BigDecimal(99.31302))
+                .setStartTime(DateTime.now())
+                .setSubscribeId("4"));
+
         subscribeDtoList.add(new SubscribeDto()
                 .setSubscribeActive(true)
                 .setLatitude(new BigDecimal(54.985736))
@@ -30,8 +53,7 @@ public class SubscribeDaoMock implements SubscribeDao {
         return subscribeDtoList
                 .stream()
                 .filter(i -> subscribeId.equals(i.getSubscribeId()))
-                .findFirst()
-                ;
+                .findFirst();
     }
 
     @Override

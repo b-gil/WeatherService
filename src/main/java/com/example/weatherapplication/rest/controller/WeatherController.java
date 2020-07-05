@@ -1,6 +1,6 @@
 package com.example.weatherapplication.rest.controller;
 
-import com.example.weatherapplication.model.WeatherJson;
+import com.example.weatherapplication.rest.controller.model.WeatherJson;
 import com.example.weatherapplication.service.WeatherService;
 import com.example.weatherapplication.util.WeatherTransformer;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,16 +1,15 @@
 package com.example.weatherapplication.service;
 
 import com.example.weatherapplication.dao.SubscribeDao;
-import com.example.weatherapplication.model.SubscribeDeleteResponseJson;
-import com.example.weatherapplication.model.SubscribeRequestJson;
-import com.example.weatherapplication.model.SubscribeServiceModel;
+import com.example.weatherapplication.rest.controller.model.SubscribeDeleteResponseJson;
+import com.example.weatherapplication.rest.controller.model.SubscribeRequestJson;
+import com.example.weatherapplication.service.model.SubscribeServiceModel;
 import com.example.weatherapplication.util.SubscribeTransformer;
 import lombok.val;
 import org.joda.time.DateTime;
 
 import javax.inject.Inject;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
@@ -39,7 +38,6 @@ public class SubscribeServiceImpl implements SubscribeService {
                 .setUserId(requestJson.getUserId())
                 .setLatitude(requestJson.getLatitude())
                 .setLongitude(requestJson.getLongitude());
-
         subscribeDao.createSubscribe(toDto(serviceModel));
     }
 

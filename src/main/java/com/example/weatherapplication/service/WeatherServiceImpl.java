@@ -3,8 +3,8 @@ package com.example.weatherapplication.service;
 import com.example.weatherapplication.dao.SubscribeDao;
 import com.example.weatherapplication.dao.WeatherDao;
 import com.example.weatherapplication.model.open.weather.api.OpenWeatherApiResponse;
-import com.example.weatherapplication.model.SubscribeDto;
-import com.example.weatherapplication.model.WeatherServiceModel;
+import com.example.weatherapplication.dao.model.SubscribeDto;
+import com.example.weatherapplication.service.model.WeatherServiceModel;
 import com.example.weatherapplication.util.WeatherTransformer;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.extern.slf4j.Slf4j;
@@ -13,7 +13,6 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.springframework.beans.factory.annotation.Value;
-
 import javax.inject.Inject;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -65,11 +64,9 @@ public class WeatherServiceImpl implements WeatherService {
 
                 val mapper = objectMapper.readValue(response.getEntity().getContent(), OpenWeatherApiResponse.class);
 
-
-
                 log.info("Weather: {}",  mapper);
-                final WeatherServiceModel weather = new WeatherServiceModel();
-                return weather;
+                return WeatherTransformer.fromJson(mapper).setSubscribeId(subscribeId);
+
             } catch (Exception e) {
                 log.error("Fault on metnutsa naruzu za pogodoi", e);
                 return null;
